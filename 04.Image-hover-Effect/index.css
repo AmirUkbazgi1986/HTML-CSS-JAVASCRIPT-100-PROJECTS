@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  width: 80rem;
+  height: 50rem;
+  background: #222;
+  position: relative;
+}
+.container .clip {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.4s ease-in-out;
+}
+.clip-1 {
+  background-image: url(https://plus.unsplash.com/premium_photo-1664300370869-4561ed950ef3?q=80&w=1215&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 26% 0, 48% 100%, 0% 100%);
+}
+.clip-2 {
+  background-image: url(https://plus.unsplash.com/premium_photo-1664300405272-b8143fe90860?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(81% 0, 23% 0, 37% 100%, 68% 100%);
+}
+.clip-3 {
+  background-image: url(https://images.unsplash.com/photo-1674923512012-290e6f1e96fe?q=80&w=1169&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(81% 0, 100% 0, 100% 100%, 68% 100%);
+}
+.container:hover .clip {
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+}
+.container .clip:hover {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
